@@ -1,3 +1,108 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .light {
+    --text: hsl(96, 11%, 27%);
+    --background: hsl(52, 100%, 97%);
+    --primary: hsl(109, 22%, 65%);
+    --secondary: hsl(146, 29%, 72%);
+    --accent: hsl(164, 29%, 62%);
+  } */
+
+@layer base {
+    :root {
+      --background: 52, 100%, 97%;
+      --foreground: 96, 11%, 27%;
+  
+      --muted: 210 40% 96.1%;
+      --muted-foreground: 215.4 16.3% 46.9%;
+  
+      --popover: 52, 100%, 97%;
+      --popover-foreground: 96, 11%, 27%;
+  
+      --border: 109, 22%, 65%;
+      --input: 214.3 31.8% 91.4%;
+  
+      --card: 52, 100%, 97%;
+      --card-foreground: 96, 11%, 27%;
+  
+      --primary: 109, 22%, 65%;
+      --primary-foreground: 52, 100%, 97%;
+  
+      --secondary: 146, 29%, 72%;
+      --secondary-foreground: 96, 11%, 27%;
+  
+      --accent: 164, 29%, 62%;
+      --accent-foreground: 52, 100%, 97%;
+  
+      --destructive: 0 100% 50%;
+      --destructive-foreground: 210 40% 98%;
+  
+      --ring: 215 20.2% 65.1%;
+  
+      --radius: 0.5rem;
+    }
+  
+    .dark {
+      --background: 224 71% 4%;
+      --foreground: 213 31% 91%;
+  
+      --muted: 223 47% 11%;
+      --muted-foreground: 215.4 16.3% 56.9%;
+  
+      --accent: 216 34% 17%;
+      --accent-foreground: 210 40% 98%;
+  
+      --popover: 224 71% 4%;
+      --popover-foreground: 215 20.2% 65.1%;
+  
+      --border: 216 34% 17%;
+      --input: 216 34% 17%;
+  
+      --card: 224 71% 4%;
+      --card-foreground: 213 31% 91%;
+  
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 1.2%;
+  
+      --secondary: 222.2 47.4% 11.2%;
+      --secondary-foreground: 210 40% 98%;
+  
+      --destructive: 0 63% 31%;
+      --destructive-foreground: 210 40% 98%;
+  
+      --ring: 216 34% 17%;
+  
+      --radius: 0.5rem;
+    }
+  }
+
+  /* From realtimecolors */
+  /* .dark {
+    --text: hsl(96, 11%, 73%);
+    --background: hsl(52, 100%, 3%);
+    --primary: hsl(109, 22%, 35%);
+    --secondary: hsl(146, 29%, 28%);
+    --accent: hsl(164, 29%, 38%);
+  } */
+  
+  
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+      font-feature-settings: "rlig" 1, "calt" 1;
+    }
+  }
+  
+
+/* Custom Styles */
+h1 {
+    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-foreground
+}
+h2 {
+    @apply scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0
+}
